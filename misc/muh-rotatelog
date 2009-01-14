@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# see muh-check on how to put this in your crontab
+# make sure this corresponds with your muhrc-settings
+#
+# $Id: muh-rotatelog,v 1.3 2002/03/24 09:40:18 sebk Exp $
+#
+
+LOGDIR=$HOME/muh-logs
+
+mkdir -p `date +$LOGDIR/%b-%y/`
+kill -USR2 `cat $HOME/.muh/pid`
